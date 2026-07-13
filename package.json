@@ -1,0 +1,23 @@
+{
+  "name": "shopez-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "client": "npm run dev -w client",
+    "server": "npm run dev -w server",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build:client": "npm run build -w client",
+    "build:server": "npm run build -w server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "optionalDependencies": {
+    "@rolldown/binding-linux-x64-gnu": "1.1.3",
+    "lightningcss-linux-x64-gnu": "1.32.0"
+  }
+}
